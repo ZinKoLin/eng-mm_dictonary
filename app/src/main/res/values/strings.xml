@@ -1,0 +1,28 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">Dictionary</string>
+
+    <!-- Splash name and sub-title -->
+    <string name="splash_title">Splash Title</string>
+    <string name="splash_subtitle">Splash Sub Title</string>
+
+    <!-- AdMob ad visibility setting and ids -->
+    <string name="ads_visibility">yes</string>
+    <string name="ads_counter">2</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!-- App sharing content -->
+    <string name="sharing_text">App Share Text Detail</string>
+
+    <!-- More app developer account name -->
+    <string name="more_apps">ExpressTemplate</string>
+
+    <!-- Language code -->
+    <string name="tts_locale">en-US</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+
+</resources>

@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The first child in the layout is for the main Activity UI-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/relData"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <ListView
+                            android:id="@+id/listViewData"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"></ListView>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="No data available"
+                        android:textColor="@color/gray"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- Side navigation drawer UI -->
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_infodialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+
+</RelativeLayout>

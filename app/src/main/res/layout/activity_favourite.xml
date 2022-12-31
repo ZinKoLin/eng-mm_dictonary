@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars = "vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relScreenShot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ad">
+
+        <RelativeLayout
+            android:id="@+id/relTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/DEFAULT_COLOR">
+
+            <TextView
+                android:id="@+id/txtWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="30dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnFavourite1"
+                android:layout_width="34dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fav"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnUnFavourite1"
+                android:layout_width="34dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/unfav"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/speak_word"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btnShare"
+                    android:padding="5dp"
+                    android:src="@drawable/speakerword"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/btnShare"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:src="@drawable/share_" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relMeaning"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/relTitle"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/btnUnFavourite"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/un_fav_" />
+
+            <ImageView
+                android:id="@+id/btnFavourite"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fav_"
+                android:visibility="gone" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/btnMeaningSpeak"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:background="@drawable/speaker" />-->
+
+            <TextView
+                android:id="@+id/txtMeaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="TextView"
+                android:lineSpacingExtra="10sp"
+
+                android:textColor="@color/gray"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/btnShare1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_infodialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+
+</RelativeLayout>

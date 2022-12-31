@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#212121</color>
+
+    <color name="DEFAULT_COLOR">#015AE6</color>
+    <color name="gray">#212121</color>
+    <color name="detailpagegray">#bcccac</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+    <color name="meaningcolor">#959797</color>
+
+
+    <color name="DEFAULT_COLOR_light">#284E93C6</color>
+    <color name="lightOrange">#1BD17A3B</color>
+    <color name="lightRed">#22DE5145</color>
+    <color name="lightGreen">#120DB846</color>
+    <color name="lightdarkblue">#172B0979</color>
+    <color name="lightCoffee">#4A795B09</color>
+    <color name="lightPurple">#22780979</color>
+    <color name="lightBlue">#1E4E93C6</color>
+    <color name="lightdarkGreen">#1D096D79</color>
+
+    <color name="cell_color">#F2F2F7</color>
+    <color name="option_cell_color">#AAAAAA</color>
+    <color name="gray2">#CCCCCC</color>
+    <color name="textExit">#151515</color>
+
+
+</resources>

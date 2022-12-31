@@ -1,0 +1,261 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The first child in the layout is for the main Activity UI-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:id="@+id/relay_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/relQuestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/relWord"
+                                android:layout_width="fill_parent"
+                                android:layout_height="80dp">
+
+                                <TextView
+                                    android:id="@+id/txtQuestion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="TextView"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relDisplayQuestion"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/relWord">
+
+                                <TextView
+                                    android:id="@+id/txtDisplayQuestion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="1/10"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20dp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relTopLine"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5px"
+                                android:layout_below="@+id/relDisplayQuestion"
+                                android:background="@color/gray"
+                                android:visibility="gone"></RelativeLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/relTopLine"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="5dp"
+                                ads:cardBackgroundColor="@color/meaningcolor"
+                                ads:cardCornerRadius="5dp">
+
+                                <Button
+                                    android:id="@+id/btnAns1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relTopLine"
+                                    android:layout_alignStart="@+id/card1"
+                                    android:layout_alignTop="@+id/card1"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/option_cell_color"
+                                    android:gravity="start|center_vertical"
+                                    android:padding="5dp"
+                                    android:text="Button 1"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/card1"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="5dp"
+                                ads:cardBackgroundColor="@color/meaningcolor"
+                                ads:cardCornerRadius="5dp">
+
+                                <Button
+                                    android:id="@+id/btnAns2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/card1"
+                                    android:layout_alignStart="@+id/card2"
+                                    android:layout_alignTop="@+id/card2"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/option_cell_color"
+                                    android:gravity="start|center_vertical"
+                                    android:padding="5dp"
+                                    android:text="Button 2"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/card2"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="5dp"
+                                ads:cardBackgroundColor="@color/meaningcolor"
+                                ads:cardCornerRadius="5dp">
+
+                                <Button
+                                    android:id="@+id/btnAns3"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/card1"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/option_cell_color"
+                                    android:gravity="start|center_vertical"
+                                    android:padding="5dp"
+                                    android:text="Button 3"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card4"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/card3"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="5dp"
+                                ads:cardBackgroundColor="@color/meaningcolor"
+                                ads:cardCornerRadius="5dp">
+
+                                <Button
+                                    android:id="@+id/btnAns4"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/card2"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@color/option_cell_color"
+                                    android:gravity="start|center_vertical"
+                                    android:padding="5dp"
+                                    android:text="Button 4"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/DEFAULT_COLOR"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_id"></com.google.android.gms.ads.AdView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Side navigation drawer UI -->
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_infodialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+
+</RelativeLayout>
